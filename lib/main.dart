@@ -78,9 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Future loadList() {
     Future<List<Nasabah>> futureNasabah = api.getNasabah();
     futureNasabah.then((nasabahList) {
-      setState(() {
-        this.nasabahList = nasabahList;
-      });
+      if (mounted) {
+        setState(() {
+          this.nasabahList = nasabahList;
+        });
+      }
     });
     return futureNasabah;
   }

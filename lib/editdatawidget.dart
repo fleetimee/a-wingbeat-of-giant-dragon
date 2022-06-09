@@ -180,7 +180,8 @@ class _EditDataWidgetState extends State<EditDataWidget> {
                                       no_selular: _noselularController.text,
                                     ));
                               }
-                              Navigator.of(context).pushNamed('/');
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/home', (route) => false);
                             },
                           )
                         ],

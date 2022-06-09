@@ -169,7 +169,8 @@ class _AddDataWidgetState extends State<AddDataWidget> {
                                   ),
                                 );
                               }
-                              Navigator.pop(context);
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/home', (route) => false);
                             },
                           )
                         ],
