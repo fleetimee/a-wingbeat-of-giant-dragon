@@ -151,9 +151,10 @@ class _AddDataWidgetState extends State<AddDataWidget> {
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       child: Column(
                         children: <Widget>[
-                          RaisedButton(
-                            splashColor: Colors.red,
-                            color: Colors.blue,
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.purple,
+                            ),
                             child: Text('Tambah Data'),
                             onPressed: () {
                               if (_addFormKey.currentState!.validate()) {

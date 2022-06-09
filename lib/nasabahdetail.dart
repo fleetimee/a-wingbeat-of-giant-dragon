@@ -109,8 +109,8 @@ class _DetailWidgetState extends State<DetailWidget> {
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                 child: Column(
                   children: <Widget>[
-                    RaisedButton(
-                      splashColor: Colors.red,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.purple),
                       onPressed: () {
                         _navigateToEditNasabah(context);
                       },
@@ -118,10 +118,9 @@ class _DetailWidgetState extends State<DetailWidget> {
                         'Edit',
                         style: TextStyle(color: Colors.white),
                       ),
-                      color: Colors.blue,
                     ),
-                    RaisedButton(
-                      splashColor: Colors.red,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.red),
                       onPressed: () {
                         _confirmDialog();
                       },
@@ -129,7 +128,6 @@ class _DetailWidgetState extends State<DetailWidget> {
                         'Delete',
                         style: TextStyle(color: Colors.white),
                       ),
-                      color: Colors.blue,
                     )
                   ],
                 ),
@@ -165,7 +163,7 @@ class _DetailWidgetState extends State<DetailWidget> {
               ),
             ),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('Yes'),
                 onPressed: () {
                   api.deleteNasabah(widget.nasabah.id);
@@ -173,7 +171,7 @@ class _DetailWidgetState extends State<DetailWidget> {
                       context, ModalRoute.withName(Navigator.defaultRouteName));
                 },
               ),
-              FlatButton(
+              TextButton(
                 child: Text('No'),
                 onPressed: () {
                   Navigator.pop(context);

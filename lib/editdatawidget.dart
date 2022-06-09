@@ -161,9 +161,10 @@ class _EditDataWidgetState extends State<EditDataWidget> {
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                       child: Column(
                         children: <Widget>[
-                          RaisedButton(
-                            splashColor: Colors.red,
-                            color: Colors.blue,
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blue,
+                            ),
                             child: Text('Tambah Data'),
                             onPressed: () {
                               if (_editFormKey.currentState!.validate()) {
