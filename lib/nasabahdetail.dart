@@ -167,8 +167,8 @@ class _DetailWidgetState extends State<DetailWidget> {
                 child: Text('Yes'),
                 onPressed: () {
                   api.deleteNasabah(widget.nasabah.id);
-                  Navigator.popUntil(
-                      context, ModalRoute.withName(Navigator.defaultRouteName));
+                  Navigator.pushNamedAndRemoveUntil(
+                                  context, '/home', (route) => false);
                 },
               ),
               TextButton(
